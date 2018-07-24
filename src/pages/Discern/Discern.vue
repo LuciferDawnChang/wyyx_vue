@@ -13,6 +13,12 @@
     <DiscernRecommend/>
     <!--十点一刻-->
     <DiscernGambit/>
+    <!--严选甄品-->
+    <DiscernZhenPin/>
+    <!--严选look-->
+    <DiscernLook/>
+    <!--更多精彩-->
+    <DiscernMore/>
 
 
     <div>
@@ -27,6 +33,9 @@
   import DiscernScroll from "../../components/DiscernScroll/DiscernScroll.vue";
   import DiscernRecommend from "../../components/DiscernRecommend/DiscernRecommend.vue";
   import DiscernGambit from "../../components/DiscernGambit/DiscernGambit.vue";
+  import DiscernZhenPin from "../../components/DiscernZhenPin/DiscernZhenPin.vue";
+  import DiscernLook from "../../components/DiscernLook/DiscernLook.vue";
+  import DiscernMore from "../../components/DiscernMore/DiscernMore.vue";
   export default {
     components:{
       HeaderTop,
@@ -34,6 +43,9 @@
       DiscernScroll,
       DiscernRecommend,
       DiscernGambit,
+      DiscernZhenPin,
+      DiscernLook,
+      DiscernMore,
     }
   }
 </script>

@@ -1,8 +1,8 @@
 <template>
     <header class="headerTops">
       <div class="top-bar">
-        <router-link to="/" class="icon-home"></router-link>
-        <router-link to="/" class="icon-logo-wrap">
+        <router-link to="/home" class="icon-home"></router-link>
+        <router-link to="/home" class="icon-logo-wrap">
           <i class="icon-logo"></i>
         </router-link>
         <div class="right">

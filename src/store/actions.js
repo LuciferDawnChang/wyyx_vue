@@ -12,6 +12,10 @@ import {
   reqColumn,
   reqRecommend,
   reqTenfifteen,
+  reqZhenpin,
+  reqYxLook,
+  reqFindMore,
+  reqCategoryData,
 } from "../api/index";
 import {
   RECEIVE_HEADCATES,
@@ -26,6 +30,10 @@ import {
   RECEIVE_COLUMN,
   RECEIVE_RECOMMEND,
   RECEIVE_TENFIFTEEN,
+  RECEIVE_ZHENPIN,
+  RECEIVE_YXLOOK,
+  RECEIVE_FINDMORES,
+  RECEIVE_CATEGORYS,
 } from "./mutations-type"
 
 
@@ -135,7 +143,6 @@ export default {
     const result = await reqRecommend();
     if (result.code===0){
       const recommend = result.data;
-      console.log(recommend);
       commit(RECEIVE_RECOMMEND,{recommend})
     }
     callBack && callBack()
@@ -145,8 +152,47 @@ export default {
     const result = await reqTenfifteen();
     if (result.code===0){
       const tenfifteens = result.data;
-      console.log(tenfifteens);
       commit(RECEIVE_TENFIFTEEN,{tenfifteens})
+    }
+    callBack && callBack()
+  },
+  //严选甄品
+  async getZhenpin({commit},callBack){
+    const result = await reqZhenpin();
+    if (result.code===0){
+      const zhenpin = result.data;
+      commit(RECEIVE_ZHENPIN,{zhenpin})
+    }
+    callBack && callBack()
+  },
+  //严选look
+  async getYxLook({commit},callBack){
+    const result = await reqYxLook();
+    if (result.code===0){
+      const yxLook = result.data;
+      commit(RECEIVE_YXLOOK,{yxLook})
+    }
+    callBack && callBack()
+  },
+  //更多精彩
+  async getFindMores({commit},callBack){
+    const result = await reqFindMore();
+    if (result.code===0){
+      const findMores = result.data;
+      commit(RECEIVE_FINDMORES,{findMores})
+    }
+    callBack && callBack()
+  },
+
+
+  /*
+  分类组件
+  */
+  async getCategorys({commit},callBack){
+    const result = await reqCategoryData();
+    if (result.code===0){
+      const categorys = result.data;
+      commit(RECEIVE_CATEGORYS,{categorys})
     }
     callBack && callBack()
   },

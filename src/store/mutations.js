@@ -12,6 +12,10 @@ import {
   RECEIVE_COLUMN,
   RECEIVE_RECOMMEND,
   RECEIVE_TENFIFTEEN,
+  RECEIVE_ZHENPIN,
+  RECEIVE_YXLOOK,
+  RECEIVE_FINDMORES,
+  RECEIVE_CATEGORYS,
 } from "./mutations-type";
 
 export default {
@@ -72,6 +76,26 @@ export default {
   //十点一刻
   [RECEIVE_TENFIFTEEN](state,{tenfifteens}){
     state.tenfifteens = tenfifteens;
+  },
+  //严选甄品
+  [RECEIVE_ZHENPIN](state,{zhenpin}){
+    state.zhenpin = zhenpin;
+  },
+  //严选look
+  [RECEIVE_YXLOOK](state,{yxLook}){
+    state.yxLook = yxLook;
+  },
+  //更多精彩
+  [RECEIVE_FINDMORES](state,{findMores}){
+    state.findMores = findMores;
+  },
+
+
+  /*
+  * 第三页,分类
+  */
+  [RECEIVE_CATEGORYS](state,{categorys}){
+    state.categorys = categorys;
   },
 
 }

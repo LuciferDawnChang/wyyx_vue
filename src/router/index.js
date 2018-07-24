@@ -9,6 +9,9 @@ import Discern from '../pages/Discern/Discern.vue';
 import Category from '../pages/Category/Category.vue';
 import ShopCart from '../pages/ShopCart/ShopCart.vue';
 import Personal from '../pages/Personal/Personal.vue';
+import login from '../pages/login/login.vue';
+import logUser from "../pages/login/logUser/LogUser.vue"
+// import logUser from '../pages/login/logUser/logUser.vue';
 
 Vue.use(VueRouter);
 
@@ -16,7 +19,7 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      redirect: '/discern'
+      redirect: '/login/loguser'
     },
     {
       path: '/interlayer',
@@ -59,6 +62,17 @@ export default new VueRouter({
       meta: {
         isShow: true
       }
+    },
+    {
+      path: '/login',
+      component: login,
+      meta: {
+        isShow: false
+      },
+    },
+    {
+      path:"/login/loguser",
+      component:logUser
     },
     // {
     //   path: '/msite',

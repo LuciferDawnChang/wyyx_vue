@@ -20,3 +20,12 @@ export const RECEIVE_BANNER = "receive_banner";
 export const RECEIVE_COLUMN = "receive_column";
 export const RECEIVE_RECOMMEND = "receive_recommend";
 export const RECEIVE_TENFIFTEEN = "receive_tenfifteen";
+export const RECEIVE_ZHENPIN = "receive_zhenpin";
+export const RECEIVE_YXLOOK = "receive_yxlook";
+export const RECEIVE_FINDMORES = "receive_findmores";
+
+
+/*
+* 第三页分类
+*/
+export const RECEIVE_CATEGORYS = "receive_categorys";

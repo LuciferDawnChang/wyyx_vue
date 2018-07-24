@@ -3,21 +3,24 @@
     <!--头部-->
     <HomeHeader/>
     <!--轮播HomeHeader-->
-    <HomeSlide/>
-    <!--品牌直供-->
-    <HomeDirect/>
-    <!--新品首发-->
-    <HomeNew/>
-    <!--人气推荐-->
-    <HomeHits/>
-    <!--严选限时购,福利社,专题精选的集合-->
-    <HomeGather/>
+    <div v-if="active===-1">
+      <HomeSlide/>
+      <!--品牌直供-->
+      <HomeDirect/>
+      <!--新品首发-->
+      <HomeNew/>
+      <!--人气推荐-->
+      <HomeHits/>
+      <!--严选限时购,福利社,专题精选的集合-->
+      <HomeGather/>
 
-    <!--商品列表-->
-    <HomeGoods/>
+      <!--商品列表-->
+      <HomeGoods/>
 
-    <!--首页底部页脚-->
-    <HomeFooter/>
+      <!--首页底部页脚-->
+      <HomeFooter/>
+    </div>
+
   </div>
 </template>
 
@@ -32,6 +35,11 @@
   import HomeGoods from "../../components/HomeGoods/HomeGoods.vue";
   import HomeFooter from "../../components/HomeFooter/HomeFooter.vue";
   export default {
+    data(){
+      return{
+        active:-1
+      }
+    },
     components:{
       HomeHeader,
       HomeSlide,

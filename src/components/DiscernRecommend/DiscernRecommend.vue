@@ -43,10 +43,7 @@
       ...mapState(['recommend'])
     },
     mounted () {
-      this.$store.dispatch('getRecommend',()=>{
-
-        console.log(this.recommend)
-      })
+      this.$store.dispatch('getRecommend')
     }
   }
 </script>
